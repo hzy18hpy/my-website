@@ -1,0 +1,819 @@
+@view-transition {
+    navigation: auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+body {
+    font-family: "Aboreto","Zen Kaku Gothic New","Marcellus";
+    background-image: linear-gradient(#eee 1px, transparent 1px),linear-gradient(90deg, #eee 1px, transparent 1px);
+    background-size: 20px 20px;
+    background-color: #fafafa;
+}
+
+main {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.section-spacer {
+    padding: 100px 0;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5%;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+}
+
+img {
+    width: 100%;
+}
+
+.title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 60px;
+    padding: 80px;
+    box-sizing: border-box;
+}
+
+.sc-title {
+    font-size: 36px;
+    letter-spacing: 0.1em;
+    flex-shrink: 0;
+}
+
+.title-line {
+    flex-grow: 1;
+    border: none;
+    border-top: 1px solid #111;
+    height: 0;
+    margin-right: -100vw;
+    padding-right: 100vw;
+}
+
+.title-line-left {
+    flex-grow: 1;
+    border: none;
+    border-top: 1px solid #111;
+    height: 0;
+    margin-left: -100vw;
+    padding-left: 100vw;
+}
+
+#works,#about,#contact {
+    padding: 100px 0 0 0;
+}
+
+#hero {
+    padding: 120px 0;
+}
+
+/* header */
+header {
+    padding: 40px 0 0 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px 0 20px;
+    box-sizing: border-box;
+}
+
+header .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+header > .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+header > .flex::after {
+    content: "";
+    position: absolute;
+    bottom: -60%;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid #111;
+}
+
+.header-logo  p a {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    color: #111;
+    text-decoration: none;
+    display: block;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav a {
+    color: #111;
+    text-decoration: none;
+    display: block;
+    margin-left: 40px;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    transition: all .3s ease;
+}
+
+header nav a:hover {
+    color: #AEC7E0;
+}
+
+/* main */
+
+.hero-wrapper {
+    position: relative;
+    width: 100%;
+    height: 480px;
+    margin-left: 0;
+}
+
+.hero-title {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    z-index: 2;
+}
+
+#hero h1 {
+    font-size: 96px;
+    font-weight: 300;
+    line-height: 1.1;
+    color: #111;
+}
+
+#hero h1 .slide-text {
+    display: inline-block;
+    padding-left: 1em;
+    font-size: 96px;
+}
+
+.hero-img {
+    position: absolute;
+    top: 60px;
+    left: 480px;
+    width:500px;
+    /*max-width: 500px;*/
+    z-index: 1;
+}
+
+.hero-img img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* worksページ */
+
+#works .section-content .flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 5%;
+    margin-bottom: 80px;
+}
+
+.card {
+    width: calc(50% - 2.5%);
+    position: relative;
+    font-family: "Zen Kaku Gothic New" , sans-serif;
+}
+
+.card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease,opacity 0.3s ease;
+}
+
+.card-link:hover {
+    transform: translateY(-8px);
+}
+
+.card-img {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #111;
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: #fff;
+    padding: 40px;
+    margin-bottom: -40px;
+    position: relative;
+    z-index: 0;
+}
+
+.card-img img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+}
+
+.text_block {
+    width: 80%;
+    border: 1px solid #111;
+    border-radius: 30px;
+    background-color: #AEC7E0;
+    color: #111;
+    padding: 24px;
+    position:relative;
+    z-index: 1;
+    left: 15%;
+    /*width: calc(85% - 100px);*/
+}
+
+.card-title {
+    font-size: 20px;
+    border-bottom: 1px solid #111;
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+}
+
+.tag {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    border-bottom: 1px solid #111;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+}
+
+.tag p {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 50px;
+    border: 1px solid #111;
+    background-color: #fff;
+}
+
+.card-text {
+    font-size: 14px;
+}
+
+/* about */
+
+#about .section-content .flex {
+    display: flex;
+    align-items: center;
+    padding: 80px;
+    box-sizing: border-box;
+}
+
+#about .title-wrapper {
+    margin-bottom: 0;
+}
+
+.about-img {
+    width: 40%;
+    margin-right: 60px;
+}
+
+.about-img img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.about-block {
+    padding: 100px 0 100px 100px;
+    border-top: 1px solid #111;
+    border-left: 1px solid #111;
+    border-bottom: 1px solid #111;
+    border-radius: 100px 0 0 100px;
+    flex-grow: 1;
+    margin-right: -50vw;
+    padding-right: 0;
+    font-family: "Zen Kaku Gothic New" , sans-serif;
+    background-color: #fff;
+}
+
+.name {
+    max-width: 500px;
+    width: 100%;
+    font-size: 26px;
+    border-bottom: 1px solid #111;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+}
+
+.about-text {
+    max-width: 500px;
+    width: 100%;
+    line-height: 1.8;
+}
+
+.about-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+
+/* contact */
+#contact {
+    padding-top: 80px;
+}
+
+#contact .sc-title {
+    padding-left: 80px;
+    margin-bottom: 10px;
+}
+
+.address {
+    font-family:  "Zen Kaku Gothic New" , sans-serif;
+    margin: 0;
+}
+
+.address a {
+    font-size: 24px;
+    color: #111;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+}
+
+.address a:hover {
+    color: #AEC7E0;
+}
+
+.address a img {
+    width: 20px;
+    height: 20px;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.address a:hover img {
+    opacity: 0.6;
+}
+
+#contact .flex {
+    display: flex;
+    align-items: center;
+    padding-left: 80px;
+    box-sizing: border-box;
+}
+
+
+/* footer */
+
+footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    box-sizing: border-box;
+}
+
+.copy {
+    font-family: "Zen Kaku Gothic New" , sans-serif;
+    text-align: center;
+    font-size: 12px;
+    color: #111;
+    margin: 0;
+    border-top: 1px solid #000;
+    padding-top: 30px;
+}
+
+#pagetop {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 999;
+}
+
+#pagetop a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 60px;
+    height: 60px;
+    background-color: #AEC7E0;
+    border: 1px solid #111;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #111;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    line-height: 1.2;
+}
+
+#pagetop a:hover {
+    background-color: #111;
+    color: #fff;
+    transform: translateY(-4px);
+}
+
+
+/* ------------- ABOUTページのCSS -------------- */
+
+#about-top,#skills,#strengths,#biography,#memories {
+    padding: 80px;
+}
+
+.wrapper {
+    margin: 0 20px;
+}
+
+.__container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 80px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* about */
+
+#about-top {
+    padding: 100px 0;
+}
+
+.hero--title h2 {
+    font-size: 36px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.page-about-flex {
+    display: flex;
+    position: relative;
+    max-width: 850px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+
+.about--img {
+    width: 60%;
+}
+
+.about--img img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+}
+
+.about--block {
+    position: absolute;
+    right: -120px;
+    bottom: 0;
+    z-index: 1;
+    width: 60%;
+    box-sizing: border-box;
+    font-size: 14px;
+    border: 1px solid #111;
+    border-radius: 30px;
+    background-color: #fff;
+    color: #111;
+    padding: 40px;
+    font-family: "Zen Kaku Gothic New" , sans-serif;
+}
+
+.__name {
+    font-size: 24px;
+    border-bottom: 1px solid #111;
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+}
+
+/*  skills  */
+
+#skills {
+    padding: 10px 0;
+}
+
+#skills .title-wrapper {
+    padding: 0;
+    margin-bottom: 100px;
+}
+
+.__skills {
+    margin: 30px 60px 30px 60px ;
+}
+
+.skills-flex {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.Design {
+    width: 320px;
+    min-height: 500px;
+    box-sizing: border-box;
+    font-size: 14px;
+    border: 1px solid #111;
+    border-radius: 90% 0 0 0 / 40% 40% 0 0;
+    padding: 150px 40px 40px 40px;
+    background-color: #AEC7E0;
+    color: #111;
+    text-align: center;
+    font-family: "Zen Kaku Gothic New" , sans-serif;
+}
+
+.Coding {
+    width: 40%;
+    height: 500px;
+    box-sizing: border-box;
+    font-size: 14px;
+    border: 1px solid #111;
+    border-radius: 0 90% 0 0 / 40% 40% 0 0;
+    padding: 150px 40px 40px 40px;
+    background-color: #AEC7E0;
+    color: #111;
+    text-align: center;
+    font-family: "Zen Kaku Gothic New" , sans-serif;
+}
+
+.Design h3 , .Coding h3 {
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    margin-bottom: 40px;
+}
+
+.Design p, .Coding p {
+    font-size: 14px;
+    text-align: left;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    font-family: "Zen Kaku Gothic New" , sans-serif;
+}
+
+/*  strengths  */
+
+#strengths .title-wrapper {
+    padding: 0;
+    margin-bottom: 100px;
+}
+
+.strengths-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.strengths-block {
+    width: 100%;
+}
+
+.strengths-flex {
+    display: flex;
+    align-items: baseline;
+    gap: 15px;
+    margin-bottom: 16px;
+}
+
+.strengths-flex h3:first-child {
+    font-family: "Marcellus" , sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: #111;
+    margin-right: 5px;
+}
+
+.strengths-flex h3:last-child {
+    font-family:"Zen Kaku Gothic New" , sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: #111;
+}
+
+.strengths-block p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #111;
+    font-family: "Zen Kaku Gothic New" , sans-serif;
+}
+
+/* biography  */
+#biography .title-wrapper {
+    padding: 0;
+    margin-bottom: 100px;
+}
+
+.tl-container {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    position: relative;
+    padding-left: 180px;
+}
+
+.tl-container::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    bottom: 5px;
+    left: 128px;
+    width: 2px;
+    background-color: #111;
+}
+
+.tl-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.tl-item::before {
+    content: "";
+    position: absolute;
+    left: calc(130px - 180px - 7px);
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #AEC7E0;
+    z-index: 1;
+}
+
+.tl-item .year {
+    position: absolute;
+    left: -180px;
+    width: 100px;
+    text-align: right;
+    top: 0;
+}
+
+.tl-item .year h3 {
+    font-family: "Marcellus" , sans-serif;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+    color: #111;
+}
+
+.tl-item p {
+    font-family: "Zen Kaku Gothic New" , sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #111;
+    margin: 0;
+}
+
+/*  memories  */
+#memories {
+    padding: 80px 0 0 0;
+}
+
+#memories .title-wrapper {
+    padding: 0;
+    margin-bottom: 100px;
+}
+
+.memories-flex {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.memories-flex .card {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.memories-flex .card img {
+    display: block;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: #111 solid 1px;
+}
+
+#memories .__container {
+    margin-bottom: 100px;
+}
+
+
+/*  contact  */
+#__contact .flex {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-sizing: border-box;
+}
+
+#__contact .flex img {
+    width: 20px;
+    height: 20px;
+    transform: translateY(3px);
+}
+
+/* --------------- WORKSページのCSS ---------------- */
+
+.works--title h2 {
+    font-size: 36px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.works--block {
+    margin: 0 200px 0 20px;
+    font-family: "Zen Kaku Gothic New" , sans-serif;
+}
+
+.works--block h3 {
+    font-size: 24px;
+    padding-bottom: 10px;
+}
+
+.__tag {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+
+.__tag p {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 50px;
+    border: 1px solid #111;
+    background-color: #AEC7E0;
+}
+
+.works__img {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 80px;
+    box-sizing: border-box;
+}
+
+.item {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    font-family: "Zen Kaku Gothic New" , sans-serif;
+}
+
+.text-line {
+    display: inline-block;
+    border-bottom: 1px solid #111;
+    padding-bottom: 1px;
+    margin:15px 0;
+}
+
+#section img {
+    margin-top: 100px;
+    border: #111 solid 1px;
+}
+
+
